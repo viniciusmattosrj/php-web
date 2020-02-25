@@ -1,0 +1,5 @@
+.vscode
+.ideia
+vendor/*
+.env
+docker-compose.yml

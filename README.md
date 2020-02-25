@@ -32,7 +32,7 @@ docker-compose up -d
 
 Navege até dentro da pasta projetos e realize o git clone do projeto
 ```bash
-cd projetos &&  git@github.com:viniciusmattosrj/php-upinside.git
+cd projetos &&  git@github.com:viniciusmattosrj/php-web.git
 ```
 
 Para que o git não considere alterações de permissão como modificações a serem rastreadas, execute:
@@ -69,12 +69,12 @@ Criando banco dados postgres:
 
 ```
 docker exec -it postgres bash
-psql -U webadm -c "CREATE DATABASE php_upinside";
+psql -U webadm -c "CREATE DATABASE php_web";
 ```
 
 Realizando a importação dump sql para a base criada:
 ```
-psql -U webadm php_upinside < /var/lib/postgresql/sqlscript/php_upinside.pgsql
+psql -U webadm php_web < /var/lib/postgresql/sqlscript/php_web.pgsql
 ```
 
 Para o acesso no <strong>POSTGRES</strong> database administration tool, use http://localhost:5050 e use as credênciais abaixo:
@@ -88,12 +88,12 @@ Criando banco dados postgres:
 
 ```
 docker exec -it mysql bash
-mysql -u root -c "CREATE DATABASE php_upinside;";
+mysql -u root -c "CREATE DATABASE php_web;";
 ```
 
 Realizando a importação dump sql para a base criada:
 ```
-mysql -u root -p php_upinside < /var/lib/mysql57/php_upinside.sql
+mysql -u root -p php_web < /var/lib/mysql57/php_web.sql
 ```
 
 Para o acesso no <strong>MYSQL</strong> database administration tool, use http://localhost:8080 e use as credênciais abaixo:
